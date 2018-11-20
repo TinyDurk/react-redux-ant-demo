@@ -1,0 +1,21 @@
+extends ./common/layout.pug
+block append header
+  script(type= "text/javascript" src= "<%= htmlWebpackPlugin.options.logScript %>")
+  <%= htmlWebpackPlugin.options.envScript %>
+
+block content
+  div#app-root !{root}
+
+block jsInline
+  script(type= "text/javascript").
+    window.REDUX_STATE=!{state}
+  <% for (var key in htmlWebpackPlugin.options.inlineJs) { %>
+  <%= htmlWebpackPlugin.options.inlineJs[key] %>
+  <% } %>
+
+block scripts
+  <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+  script(type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>")
+  <% } %>
+
+  <%= htmlWebpackPlugin.options.mtaStr %>

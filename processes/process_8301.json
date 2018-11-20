@@ -1,0 +1,11 @@
+{
+  "apps" : [{
+    "script": "./dist/server/server.js",
+    "name": "demo_8301.prod",
+    "instances": "1",
+    "exec_mode": "cluster",
+    "env": {
+      "port": 8301
+    }
+  }]
+}

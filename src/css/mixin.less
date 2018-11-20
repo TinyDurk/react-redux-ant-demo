@@ -1,0 +1,44 @@
+@import "./variables";
+
+.color-text(@color: #000000) {
+  color: @color;
+}
+
+.color-btn-light(@color: @blue-color, @font-color: #ffffff) {
+  color: @font-color;
+  background: none;
+  border: none;
+  &:hover {
+    color: lighten(@color, @light-amount);
+  }
+  &:active {
+    color: darken(@color, @darken-amount);
+  }
+}
+
+// TODO: 这里应该计算一下传入颜色的亮度分情况选择字体颜色的灰度，避免过亮导致看不清字
+// 此 mixin 暂未实现 ant.design 中点击 button 的扩散效果，主要需要 btn-light
+.color-btn(@color: @blue-color) {
+  transition: all 0.3s ease;
+  color: #ffffff;
+  background: @color;
+  border-radius: 4px;
+  padding: 2px 6px;
+  line-height: 1.2;
+  cursor: pointer;
+  &:hover {
+    background: lighten(@color, @light-amount);
+  }
+  &:active {
+    background: darken(@color, @darken-amount);
+  }
+  &:disabled {
+    background: desaturate(@color, @desaturate-amount);
+  }
+  &.tia-btn-light {
+    .color-btn-light(@color, @color);
+  }
+  &.tia-btn-light-dark {
+    .color-btn-light(@color, #000000);
+  }
+}

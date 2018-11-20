@@ -1,0 +1,5 @@
+**/*.md
+**/*.svg
+**/*.pug
+**/*.html
+package.json

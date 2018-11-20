@@ -1,0 +1,66 @@
+@import "./variables";
+@import "./mixin";
+
+// ------------------------------
+// |           按钮部分           |
+// ------------------------------
+
+.tia-btn-primary {
+  .color-btn(@blue-color);
+}
+
+.tia-btn-danger {
+  .color-btn(@red-color);
+}
+
+// ------------------------------
+// |           文字部分           |
+// ------------------------------
+
+.tia-text-primary {
+  .color-text(@blue-color);
+}
+
+.tia-text-gray {
+  .color-text(@deep-gray-color);
+}
+
+.tia-text-danger {
+  .color-text(@red-color);
+}
+
+// ------------------------------
+// |           背景部分           |
+// ------------------------------
+
+.tia-bg-primary {
+  background: @blue-color;
+}
+
+.tia-bg-gray {
+  background: @gray-color;
+}
+
+// ------------------------------
+// |           工具部分           |
+// ------------------------------
+
+.cursor-point {
+  cursor: pointer;
+}
+
+// ------------------------------
+// |           显示部分           |
+// ------------------------------
+
+.display-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.tia-flex {
+  display: flex;
+  &.tia-justify-space-between {
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,30 @@
+/* ant production 环境神奇地把这个样式改了 */
+.anticon svg {
+  display: block;
+}
+
+/* ant 没有提供接口修改 modal-content 样式，将modal单纯变为一个弹出层 */
+.pure-modal.ant-modal-wrap .ant-modal  {
+  top: 0;
+  padding: 0;
+}
+
+.pure-modal.ant-modal-wrap .ant-modal-content  {
+  background: none;
+}
+
+.pure-modal.ant-modal-wrap .ant-modal-close  {
+  color: #ffffff;
+}
+
+/* ant 没有提供接口修改 modal-content 样式，将modal单纯变为一个弹出层 */
+.pure-popover.ant-popover .ant-popover-content > .ant-popover-arrow {
+  display: none;
+}
+
+/* 去掉 ant 中数字输入框的箭头 */
+.ant-input-number .ant-input-number-handler-wrap {
+  display: none;
+}
+
+/* 一些常用的global样式定义在这里 */

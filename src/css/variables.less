@@ -1,0 +1,42 @@
+// ------------------------------
+// |           颜色部分           |
+// ------------------------------
+
+@darken-amount: 10%;
+@light-amount: 10%;
+@desaturate-amount: 30%;
+
+@gray-color: #f2f2f2;
+
+@deep-gray-color: #9d9d9d;
+
+/*
+* ant.design 在颜色方面计算复杂
+* 且存在选择主题色，浏览器中编译
+* 这里对颜色简单处理，暂不参与主题色变更
+* */
+@red-color: #f5222d;
+@red-color-hover: #ff4d4f;
+@red-color-active: #cf1322;
+
+@blue-color: #1890ff;
+@blue-color-hover: #40a9ff;
+@blue-color-active: #096dd9;
+
+/*
+* 以下原色借鉴 Google Logo Color
+*/
+@yellow-color: #FBBC05;
+@yellow-color-hover: lighten(@yellow-color, @light-amount);
+@yellow-color-active: darken(@yellow-color, @darken-amount);
+
+@green-color: #34A853;
+@green-color-hover: lighten(@green-color, @light-amount);
+@green-color-active: darken(@green-color, @darken-amount);
+
+/*
+* 以下原色借鉴 Microsoft Logo Color
+*/
+@light-blue-color: #00A1F1;
+@light-blue-color-hover: lighten(@light-blue-color, @light-amount);
+@light-blue-color-active: darken(@light-blue-color, @darken-amount);

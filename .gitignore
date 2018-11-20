@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+.idea/
+.DS_Store
+.git/
+.vscode
+npm-debug.log
+*.log*
+node.dev.env
+node.prod.env
+views/prod/*
+views/dev/*
+public/views/dev/*
+public/views/prod/*
+package-lock.json
+coverage/
